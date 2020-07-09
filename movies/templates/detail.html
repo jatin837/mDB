@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{movie.name}}{% endblock %}
+
+{% block body %}
+  <div class="jumbotron">
+    <img src="{{movie.img_url}}" class="img-thumbnail">
+    <span class="caption">
+      <h1>{{movie.name}}</h1>
+      <h5>Starring:</h5>
+      {% for actor in actors %}
+      <h4 class="list-group-item"><a href="#">{{actor}}</a></h4>
+      {% endfor %}
+    </span>
+  </div>
+{% endblock %}
